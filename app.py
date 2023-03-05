@@ -4,9 +4,14 @@ from PIL import Image
 import plotly.express as px
 import csv
 import plotly.graph_objects as go
+from pathlib import Path
+
+csv_path = Path(__file__).parents[0] /'gss2016.csv'
 
 
-gss_data=pd.read_csv('gss2016.csv')
+gss_data=pd.read_csv(csv_path)
+
+# gss_data=pd.read_csv('gss2016.csv')
 
 
 st.header("GSS dataset")
